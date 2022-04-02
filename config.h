@@ -25,7 +25,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 /* fonts */
 static const char *fonts[] = {
 	"JetBrains Mono:size=12",
-	"FontAwesome:size=12"
+	"Symbols Nerd Font:size=12",
 };
 
 /* theme: Ancient One Dark - Violet */
@@ -41,7 +41,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "" };
+static const char *tags[] = { "", "ﭮ", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -61,9 +61,9 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "",        tile },    /* first entry is default */
+	{ "ﱖ",        tile },    /* first entry is default */
 	{ "",        NULL },    /* no layout function means floating behavior */
-	{ "",        monocle },
+	{ "",        monocle },
 };
 
 /* key definitions */
