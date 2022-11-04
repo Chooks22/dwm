@@ -78,12 +78,18 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *roficmd[] = { "rofi", "-show", "drun" };
+static const char *roficmd[]  = { "rofi", "-show", "drun" };
+static const char *rofissh[]  = { "rofi", "-show", "ssh", "-no-show-icons" };
+static const char *rofimoji[] = { "rofi", "-show", "emoji", "-no-show-icons" };
+static const char *bwmenu[]   = { "bwmenu", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = roficmd } },
+  { MODKEY,                       XK_grave,  spawn,          {.v = rofissh } },
+  { MODKEY,                       XK_e,      spawn,          {.v = rofimoji } },
+  { MODKEY,                       XK_r,      spawn,          {.v = bwmenu } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
